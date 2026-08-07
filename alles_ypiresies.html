@@ -1,62 +1,189 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Άλλες Υπηρεσίες </title>
+<title id="page-title"> Funko Planet </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="script1.js"></script>
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .products-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .product-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  .product-card img {
+    border-radius: 4px;
+  }
+  .product-card button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .product-card button:hover {
+    background-color: #e6b800;
+  }
+</style>
 </head>
-<body class="alles_ypiresies-page">
+<body class="proionta-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
-     </div>
-  <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
-  </div>
-<img src="pawcorner.jpg"width="200" height="200">
-
+ <div class="owner">
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
+  </div>  
+<div class="logo"> Funko Planet </div>
 <ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
-</ul>
-</nav></header>
-<h1> Φωτογράφηση Κατοικιδίων </h1>
-<img src="skylakia_gatakia01.jpg"width="200" height="200">
-<p> Κάθε παιχνιδιάρικη κίνηση, κάθε βλέμμα, κάθε μικρή στιγμή αγάπης <br>
- αξίζει να μείνει για πάντα ζωντανή. Η φωτογράφιση κατοικιδίων δεν είναι <br>
- απλώς μία λήψη εικόνων. Είναι η αποτύπωση της προσωπικότητας, της τρυφερότητας <br>
- και της μοναδικής σχέσης που μοιράζεστε με τον τετράποδο φίλο σας. 
-Η  φωτογράφιση κατοικιδίων είναι μία εξειδικευμένη υπηρεσία που αναδεικνύει<br>
-τη μοναδική προσωπικότητα κάθε ζώου. Με σύγχρονο εξοπλισμό, φυσικό φωτισμό και <br>
-απόλυτο σεβασμό στον ρυθμό και την άνεση του κατοικιδίου σας, δημιουργούμε εικόνες<br> 
-υψηλής αισθητικής και ποιότητας.
-Είτε πρόκειται για πορτρέτα, οικογενειακές λήψεις ή θεματικές φωτογραφίσεις, <br>
-στόχος μας είναι να αποτυπώσουμε αυθεντικές στιγμές που θα σας <br>
-συντροφεύουν για μια ζωή.</p> <br> <br>
-<hr> 
-<h2> Online Εκπαίδευση Σκύλων </h2>
-<img src="skylakia_gatakia02.jpg"width="200" height="200">
-<p> Η εκπαίδευση του σκύλου σας μπορεί πλέον να γίνει εύκολα,<br>
- αποτελεσματικά και από την άνεση του σπιτιού σας. Μέσα <br>
- από σύγχρονα online προγράμματα, σας καθοδηγούμε βήμα-βήμα ώστε <br>
- να χτίσετε μια ισορροπημένη και υγιή σχέση με τον τετράποδο φίλο σας.<br>
-Με πρακτικές οδηγίες, βίντεο μαθημάτων και εξατομικευμένη υποστήριξη, <br>
-μαθαίνετε πώς να ενισχύετε τη σωστή συμπεριφορά, να αντιμετωπίζετε<br>
- καθημερινές δυσκολίες και να επικοινωνείτε ουσιαστικά με τον σκύλο σας.<br>
-Γιατί η εκπαίδευση δεν είναι απλώς κανόνες: είναι κατανόηση, συνεργασία <br>
- και εμπιστοσύνη. </p>
- <hr>
- <h1> Γνωρίζετε αρκετά για την εκπαίδευση σκύλων; Ας το διαπιστώσουμε! </h1>
- <button onclick="startQuiz ()"> Ξεκινήστε το Quiz </button><!-- Το onclick λέει πως όταν πατηθεί το κουμπί, θα τρέξει την συνάρτηση startQuiz -->
- <script src="quiz1.js"></script>
-<footer>
-<p> © 2026 Paw Corner </p>
- <p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<li> <a href="index.html" id="nav-home"> Αρχική </a></li>
+<li> <a href="i_istoria_ton_funkopop.html" id="nav-history"> Η ιστορία των Funko Pop </a> </li>
+<li> <a href="proionta.html" id="nav-products"> Προϊόντα </a> </li>
+<li><a href="game.php" id="nav-game"> Παιχνίδι</a></li>
+<li> <a href="kalathi.php" id="nav-cart"> Καλάθι </a></li>
+</ul>	
+</nav>
+</header>
+
+<div class="products-container">
+<h1 id="main-heading"> Τα Funko Pop μας </h1><br>
+
+<div class="product-card">
+<h3 id="prod1-title">Joey Tribbiani</h3>
+<img src="Joey_Tribbiani.jpg" width="200" height="200" alt="Joey Tribbiani">
+<p> 15€ </p>
+<button onclick="addToCart('Joey Tribbiani',15)" id="prod1-btn">Προσθήκη</button>
+</div> <br><br>
+
+<div class="product-card">
+<h3 id="prod2-title">Goofy</h3>
+<img src="Goofy.jpg" width="200" height="200" alt="Goofy">
+<p> 18€ </p>
+<button onclick="addToCart('Goofy', 18)" id="prod2-btn">Προσθήκη</button>
+</div> <br> <br>
+
+<div class="product-card">
+<h3 id="prod3-title">Mary Poppins</h3>
+<img src="Marry_Poppins.jpg" width="200" height="200" alt="Mary Poppins">
+<p> 30€ </p>
+<button onclick="addToCart('Mary Poppins',30)" id="prod3-btn">Προσθήκη</button>
+</div><br><br>
+
+<div class="product-card">
+<h3 id="prod4-title">Smurfette</h3>
+<img src="Smurfette.jpg" width="200" height="200" alt="Smurfette">
+<p> 20€ </p>
+<button onclick="addToCart('Smurfette',20)" id="prod4-btn">Προσθήκη</button>
+</div><br><br>
+
+<div class="product-card">
+<h3 id="prod5-title">Care A Lot Bear</h3>
+<img src="Care_bear.jpg" width="200" height="200" alt="Care A Lot Bear">
+<p> 15€ </p>
+<button onclick="addToCart('Care A Lot Bear',15)" id="prod5-btn">Προσθήκη</button>
+</div> <br> <br>
+
+<div class="product-card">
+<h3 id="prod6-title">Scooby Doo</h3>
+<img src="scooby_doo.jpeg" width="200" height="200" alt="Scooby Doo">
+<p> 15€ </p>
+<button onclick="addToCart('Scooby Doo', 15)" id="prod6-btn">Προσθήκη</button>
+</div> <br> <br>
+
+<div class="game-cta">
+    <h2 id="cta-title">🎁 Κέρδισε έκπτωση</h2>
+    <p id="cta-desc">Παίξε το Funko Game και πάρε κουπόνι -15%</p>
+    <a href="game.php">
+        <button id="cta-btn">Παίξε τώρα</button>
+    </a>
+</div>
+</div>
+
+<footer> 
+<div class="footer-content">
+<p> &#64; 2026 Funko Planet </p>
+<p id="footer-contact"> Επικοινωνία: funkoplanet@gmail.com </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>   
+</div> 
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Funko Planet";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-history').innerText = "History of Funko Pops";
+      document.getElementById('nav-products').innerText = "Products";
+      document.getElementById('nav-game').innerText = "Game";
+      document.getElementById('nav-cart').innerText = "Cart";
+
+      document.getElementById('main-heading').innerText = "Our Funko Pops";
+      document.getElementById('prod1-btn').innerText = "Add";
+      document.getElementById('prod2-btn').innerText = "Add";
+      document.getElementById('prod3-btn').innerText = "Add";
+      document.getElementById('prod4-btn').innerText = "Add";
+      document.getElementById('prod5-btn').innerText = "Add";
+      document.getElementById('prod6-btn').innerText = "Add";
+
+      document.getElementById('cta-title').innerText = "🎁 Win a Discount";
+      document.getElementById('cta-desc').innerText = "Play the Funko Game and get a -15% coupon";
+      document.getElementById('cta-btn').innerText = "Play Now";
+
+      document.getElementById('footer-contact').innerText = "Contact: funkoplanet@gmail.com";
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Funko Planet";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-history').innerText = "Η ιστορία των Funko Pop";
+      document.getElementById('nav-products').innerText = "Προϊόντα";
+      document.getElementById('nav-game').innerText = "Παιχνίδι";
+      document.getElementById('nav-cart').innerText = "Καλάθι";
+
+      document.getElementById('main-heading').innerText = "Τα Funko Pop μας";
+      document.getElementById('prod1-btn').innerText = "Προσθήκη";
+      document.getElementById('prod2-btn').innerText = "Προσθήκη";
+      document.getElementById('prod3-btn').innerText = "Προσθήκη";
+      document.getElementById('prod4-btn').innerText = "Προσθήκη";
+      document.getElementById('prod5-btn').innerText = "Προσθήκη";
+      document.getElementById('prod6-btn').innerText = "Προσθήκη";
+
+      document.getElementById('cta-title').innerText = "🎁 Κέρδισε έκπτωση";
+      document.getElementById('cta-desc').innerText = "Παίξε το Funko Game και πάρε κουπόνι -15%";
+      document.getElementById('cta-btn').innerText = "Παίξε τώρα";
+
+      document.getElementById('footer-contact').innerText = "Επικοινωνία: funkoplanet@gmail.com";
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
