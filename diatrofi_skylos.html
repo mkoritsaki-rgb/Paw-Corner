@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Σκύλος </title>
+<title id="page-title"> Διατροφή Σκύλου </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .dog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .dog-container p {
+    line-height: 1.6;
+    text-align: justify;
+  }
+</style>
 </head>
 <body class="diatrofi_skylos-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
-     </div>
+  <div class="logo"> Paw Corner </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>
-<img src="pawcorner.jpg"width="200" height="200">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<!-- Η εικόνα του header για ομοιομορφία -->
+<img src="pawcorner.jpg" width="200" height="200" alt="Paw Corner">
+</header>
+
+<div class="dog-container">
+<h1 id="main-heading"> Κατηγορίες </h1>
+<ul id="dog-categories">
+  <li> <a href="diatrofi_skylos.html"> Διατροφή </a> </li>
+  <li> <a href="voltes_skylos.html"> Βόλτες </a> </li>
+  <li> <a href="spiti_skylos.html"> Σπίτι </a> </li>
 </ul>
-</nav></header>
-<h1> Κατηγορίες </h1>
-<ul>
-<li> <a href="diatrofi_skylos.html"> Διατροφή </a> </li>
-<li> <a href="voltes_skylos.html"> Βόλτες </a> </li>
-<li> <a href="spiti_skylos.html"> Σπίτι </a> </li>
-</ul>
-<h2> Διατροφή Σκύλου </h2>
+
+<h2 id="sub-heading"> Διατροφή Σκύλου </h2>
 <table border="0" align="center">
 <tr> 
 <td align="center" width="200">
-<img src="skyloi_diatrofi01.jpg" width="200" height="200">
-<p> Η ROYAL CANIN® Mini Puppy είναι <br> ειδικά σχεδιασμένη <br>
+<img src="skyloi_diatrofi01.jpg" width="200" height="200" alt="Royal Canin Mini Puppy">
+<p id="desc1"> Η ROYAL CANIN® Mini Puppy είναι <br> ειδικά σχεδιασμένη <br>
 για να υποστηρίζει τις διατροφικές ανάγκες των κουταβιών <br> μικρόσωμης φυλής.<br>
  Αυτή η φόρμουλα είναι κατάλληλη για κουτάβια ηλικίας 2 έως 10 μηνών <br>
  που πρέπει να φτάσουν σε ενήλικο βάρος 4-10 κιλά.<br>
@@ -47,48 +81,48 @@
 <b>ΥΠΟΣΤΗΡΙΞΗ ΤΟΥ ΜΙΚΡΟΒΙΩΜΑΤΟΣ:</b> Συνδυασμός πρεβιοτικών (MOS) και πρωτεϊνών υψηλής πεπτικότητας<br>
 που βοηθούν στη διατήρηση μιας υγιούς ισορροπίας της εντερικής μικροχλωρίδας για <br>την καλή λειτουργία <br>
  του πεπτικού συστήματος.<br>
-<b>ΒΕΛΤΙΣΤΟ ΕΝΕΡΓΕΙΑΚΟ ΠΕΡΙΕΧΟΜΕΝΟ:</b>Ικανοποιεί τις υψηλές ενεργειακές ανάγκες <br>
+<b>ΒΕΛΤΙΣΤΟ ΕΝΕΡΓΕΙΑΚΟ ΠΕΡΙΕΧΟΜΕΝΟ:</b> Ικανοποιεί τις υψηλές ενεργειακές ανάγκες <br>
 κουταβιών μικρόσωμων φυλών για μια σύντομη περίοδο ανάπτυξης,<br> έως 10 μηνών.</p>
 </td>
 <td align="center" width="200">
-<img src="skyloi_diatrofi03.jpg"width="200" height="200">
-<p> Η <b> FRENCH BULLDOG ADULT </b> συμβάλλει στη διατήρηση <br> της μυικής μάζας χάρη <br>
+<img src="skyloi_diatrofi03.jpg" width="200" height="200" alt="French Bulldog Adult">
+<p id="desc2"> Η <b> FRENCH BULLDOG ADULT </b> συμβάλλει στη διατήρηση <br> της μυικής μάζας χάρη <br>
  σε ένα βέλτιστο περιεχόμενο σε πρωτεΐνη (26%). Περιέχει επίσης L-καρνιτίνη. <br>
 <b>ΥΓΙΕΣ ΔΕΡΜΑ:</b> Συμβάλλει στην ενίσχυση του ρόλου φραγμού <br>του δέρματος <br>
 και στη διατήρηση της υγείας του. <br>
-<b>ΜΕΙΩΣΗ ΟΣΜΗΣ:</b>Συμβάλλει στη μείωση των εντερικών ζυμώσεων <br> που μπορεί να προκαλέσουν <br>
+<b>ΜΕΙΩΣΗ ΟΣΜΗΣ:</b> Συμβάλλει στη μείωση των εντερικών ζυμώσεων <br> που μπορεί να προκαλέσουν <br>
  πεπτικές διαταραχές, μετεωρισμό και <br> άσχημη οσμή των κοπράνων.<br>
 Μια κροκέτα αποκλειστικά σχεδιασμένη <br> ώστε να διευκολύνει τη <br>
 σύλληψη της τροφής για το <b>French Bulldog </b> αλλά και να <br>ενθαρρύνει τη μάσηση.</p>
 </td>
 <td align="center" width="200">
-<img src="skyloi_diatrofi04.jpg"width="200" height="200">
-<p> Οι λιχουδιές <b>Celebrate Freshness</b> είναι low fat,<br> υποαλλεργικές και grain free.<br>
+<img src="skyloi_diatrofi04.jpg" width="200" height="200" alt="Celebrate Freshness Treats">
+<p id="desc3"> Οι λιχουδιές <b>Celebrate Freshness</b> είναι low fat,<br> υποαλλεργικές και grain free.<br>
  Παρασκευάζονται με προσεγμένες πρώτες ύλες και πρώτο συστατικό το κρέας. <br>
  Τώρα με μεγάλη γκάμα γεύσεων και αρωμάτων για απαιτητικά κατοικίδια <br> που διαλέγουν
 <br> πάντα το καλύτερο!</p>
 </td>
-<td align="center"width="200">
-<img src="skyloi_diatrofi05.jpg"width="200" height="200">
-<p> Η <b>Reflex Plus </b> είναι μια πλήρης και ισορροπημένη <br>τροφή <br>
+<td align="center" width="200">
+<img src="skyloi_diatrofi05.jpg" width="200" height="200" alt="Reflex Plus Dog Food">
+<p id="desc4"> Η <b>Reflex Plus </b> είναι μια πλήρης και ισορροπημένη <br>τροφή <br>
 εξαιρετικής ποιότητας για σκύλους. <br>
 Η σύνθεσή της βασίζεται στους ξυλο-ολιγοσακχαρίτες (XOS)<br> οι οποίοι ασκούν <br>
  πολύτιμη προβιοτική δράση με σχεδόν μηδενική θερμιδική αξία. <br>
 Βελτιώνει συνολικά την υγεία του αγαπημένου σας κατοικίδιου καθώς:<br>
- Ενισχύει το ανοσοποιητικό σύστημα, αυξάνει την πεπτικότητα<br> και αποτελεί φυσικό αντιοξειδωτικό.<p>
- </td>
- <td align="center| width="200">
- <img src="skyloi_ekpaideysi04.jpg"width="200" height="200">
- <p> Λιχουδιές με <b>κοτόπουλο,</b> για <b>ενήλικους σκύλους.</b><br>
+ Ενισχύει το ανοσοποιητικό σύστημα, αυξάνει την πεπτικότητα<br> και αποτελεί φυσικό αντιοξειδωτικό.</p>
+</td>
+ <td align="center" width="200">
+ <img src="skyloi_ekpaideysi04.jpg" width="200" height="200" alt="Chicken Treats">
+ <p id="desc5"> Λιχουδιές με <b>κοτόπουλο,</b> για <b>ενήλικους σκύλους.</b><br>
  Μαγειρεύονται σε πολύ χαμηλή θερμοκρασία προκειμένου να <br>διατηρήσουν όλα τα <br>
- θρεπτικά συστατικά τους. Δεν περιέχουν γλουτένη, τεχνικά χρώματα, ΓΤΟ <br>
+ θρεπτικά συστατικά τους. Δεν περιέχουν γλουτένη, τεχνητά χρώματα, ΓΤΟ <br>
  και τρανς λιπαρά οξέα. Η μικρή τους συσκευασία σάς βοηθά <br> να τα έχετε παντού <br>
  μαζί σας, σε βόλτες ή εκδρομές.</p>
 </td>
-<td align="center"width="200">
-<img src="skyloi_ekpaideysi05.jpg"width="200" height="200">
-<p> Λιχουδιές με τραγανό περίβλημα και μαλακό πυρήνα, <br>
-με γεύση <b> μοσχάρι,</b> για ενήλικους σκύλους <br>
+<td align="center" width="200">
+<img src="skyloi_ekpaideysi05.jpg" width="200" height="200" alt="Beef Treats">
+<p id="desc6"> Λιχουδιές με τραγανό περίβλημα και μαλακό πυρήνα, <br>
+με γεύση <b>μοσχάρι,</b> για ενήλικους σκύλους <br>
  από 10kg και άνω. Είναι πλούσιες σε βιταμίνες, <br>
  μεταλλικά άλατα και Ωμέγα-3 λιπαρά οξέα,<br>
  ενώ δεν περιέχουν τεχνητά χρώματα και αρώματα.<br>
@@ -96,13 +130,82 @@
  και θα ικανοποιήσουν απόλυτα το σκύλο σας. <br> </p>
  </td> </tr>
  </table>
-<br/><br/>
+</div>
+<br><br>
+
 <footer>
 <p>© 2026 Paw Corner </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Dog Nutrition";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "Categories";
+      document.getElementById('dog-categories').innerHTML = `
+        <li> <a href="diatrofi_skylos.html">Nutrition</a> </li>
+        <li> <a href="voltes_skylos.html">Walks</a> </li>
+        <li> <a href="spiti_skylos.html">Home</a> </li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Dog Nutrition";
+      
+      document.getElementById('desc1').innerHTML = "ROYAL CANIN® Mini Puppy is <br> specifically designed <br>to support the nutritional needs of small breed puppies.<br>This formula is suitable for puppies aged 2 to 10 months <br>destined to reach an adult weight of 4-10 kg.<br><b>STRONG IMMUNE SYSTEM:</b> Supports the development of the puppy's <br>immune system, including a scientifically proven <br>complex containing vitamins E and C.<br><b>BRAIN DEVELOPMENT:</b> Enriched with omega-3 fatty acids (DHA),<br>proven to support brain development <br>and enhance learning during early training.<br><b>MICROBIOME SUPPORT:</b> Combination of prebiotics (MOS) and highly digestible proteins<br>helping to maintain a healthy balance of intestinal microflora for good <br>digestive function.<br><b>OPTIMAL ENERGY CONTENT:</b> Satisfies the high energy needs <br>of small breed puppies during a short growth period, up to 10 months.";
+
+      document.getElementById('desc2').innerHTML = "<b>FRENCH BULLDOG ADULT</b> helps maintain <br> muscle mass thanks to <br>an optimal protein content (26%). It also contains L-carnitine.<br><b>HEALTHY SKIN:</b> Helps strengthen the skin barrier role <br>and maintain skin health.<br><b>ODOR REDUCTION:</b> Helps reduce intestinal fermentation <br>that can cause <br>digestive disorders, flatulence, and <br>bad stool odor.<br>A kibble exclusively designed <br>to facilitate food grasping for the <b>French Bulldog</b> and encourage chewing.";
+
+      document.getElementById('desc3').innerHTML = "<b>Celebrate Freshness</b> treats are low fat,<br> hypoallergenic, and grain free.<br>Made with carefully selected raw materials with meat as the first ingredient.<br>Now with a wide range of flavors and aromas for demanding pets <br>who always choose <br>the best!";
+
+      document.getElementById('desc4').innerHTML = "<b>Reflex Plus</b> is a complete and balanced <br>top quality food <br>for dogs. <br>Its composition is based on xylo-oligosaccharides (XOS)<br>which exert <br>valuable prebiotic action with almost zero caloric value.<br>Overall improves the health of your beloved pet by:<br>Strengthening the immune system, increasing digestibility,<br>and acting as a natural antioxidant.";
+
+      document.getElementById('desc5').innerHTML = "Treats with <b>chicken,</b> for <b>adult dogs.</b><br>Cooked at a very low temperature to <br>preserve all <br>their nutrients. Free from gluten, artificial colors, GMOs <br>and trans fatty acids. Their small packaging helps <br>you keep them everywhere <br>with you, on walks or excursions.";
+
+      document.getElementById('desc6').innerHTML = "Treats with a crispy shell and soft core, <br>flavored with <b>beef,</b> for adult dogs <br>from 10kg and above. Rich in vitamins, <br>minerals, and Omega-3 fatty acids,<br>while containing no artificial colors and flavors.<br>Combine nutritional value and tasteful pleasure <br>and will completely satisfy your dog. <br>";
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Διατροφή Σκύλου";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Κατηγορίες";
+      document.getElementById('dog-categories').innerHTML = `
+        <li> <a href="diatrofi_skylos.html"> Διατροφή </a> </li>
+        <li> <a href="voltes_skylos.html"> Βόλτες </a> </li>
+        <li> <a href="spiti_skylos.html"> Σπίτι </a> </li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Διατροφή Σκύλου";
+
+      document.getElementById('desc1').innerHTML = "Η ROYAL CANIN® Mini Puppy είναι <br> ειδικά σχεδιασμένη <br>για να υποστηρίζει τις διατροφικές ανάγκες των κουταβιών <br> μικρόσωμης φυλής.<br> Αυτή η φόρμουλα είναι κατάλληλη για κουτάβια ηλικίας 2 έως 10 μηνών <br> που πρέπει να φτάσουν σε ενήλικο βάρος 4-10 κιλά.<br> <b>ΙΣΧΥΡΟ ΑΝΟΣΟΠΟΙΗΤΙΚΟ:</b> Υποστηρίζει την ανάπτυξη του <br>ανοσοποιητικού συστήματος <br> του κουταβιού, περιλαμβάνοντας ένα επιστημονικά αποδεδειγμένο <br> σύμπλεγμα που <br> περιέχει τις βιταμίνες Ε και C. <br> <b>ΕΓΚΕΦΑΛΙΚΗ ΑΝΑΠΤΥΞΗ:</b> Εμπλουτισμένο με ωμέγα-3 λιπαρά οξέα (DHA),<br> τα οποία είναι επιστημονικά αποδεδειγμένα ότι υποστηρίζουν την ανάπτυξη <br> του εγκεφάλου <br> του κουταβιού και ενισχύουν τη μάθηση κατά την πρώιμη εκπαίδευσή του.<br><b>ΥΠΟΣΤΗΡΙΞΗ ΤΟΥ ΜΙΚΡΟΒΙΩΜΑΤΟΣ:</b> Συνδυασμός πρεβιοτικών (MOS) και πρωτεϊνών υψηλής πεπτικότητας<br>που βοηθούν στη διατήρηση μιας υγιούς ισορροπίας της εντερικής μικροχλωρίδας για <br>την καλή λειτουργία <br> του πεπτικού συστήματος.<br><b>ΒΕΛΤΙΣΤΟ ΕΝΕΡΓΕΙΑΚΟ ΠΕΡΙΕΧΟΜΕΝΟ:</b> Ικανοποιεί τις υψηλές ενεργειακές ανάγκες <br>κουταβιών μικρόσωμων φυλών για μια σύντομη περίοδο ανάπτυξης,<br> έως 10 μηνών.";
+
+      document.getElementById('desc2').innerHTML = "Η <b> FRENCH BULLDOG ADULT </b> συμβάλλει στη διατήρηση <br> της μυικής μάζας χάρη <br> σε ένα βέλτιστο περιεχόμενο σε πρωτεΐνη (26%). Περιέχει επίσης L-καρνιτίνη. <br><b>ΥΓΙΕΣ ΔΕΡΜΑ:</b> Συμβάλλει στην ενίσχυση του ρόλου φραγμού <br>του δέρματος <br>και στη διατήρηση της υγείας του. <br><b>ΜΕΙΩΣΗ ΟΣΜΗΣ:</b> Συμβάλλει στη μείωση των εντερικών ζυμώσεων <br> που μπορεί να προκαλέσουν <br> πεπτικές διαταραχές, μετεωρισμό και <br> άσχημη οσμή των κοπράνων.<br>Μια κροκέτα αποκλειστικά σχεδιασμένη <br> ώστε να διευκολύνει τη <br>σύλληψη της τροφής για το <b>French Bulldog </b> αλλά και να <br>ενθαρρύνει τη μάσηση.";
+
+      document.getElementById('desc3').innerHTML = "Οι λιχουδιές <b>Celebrate Freshness</b> είναι low fat,<br> υποαλλεργικές και grain free.<br> Παρασκευάζονται με προσεγμένες πρώτες ύλες και πρώτο συστατικό το κρέας. <br> Τώρα με μεγάλη γκάμα γεύσεων και αρωμάτων για απαιτητικά κατοικίδια <br> που διαλέγουν<br> πάντα το καλύτερο!";
+
+      document.getElementById('desc4').innerHTML = "Η <b>Reflex Plus </b> είναι μια πλήρης και ισορροπημένη <br>τροφή <br>εξαιρετικής ποιότητας για σκύλους. <br>Η σύνθεσή της βασίζεται στους ξυλο-ολιγοσακχαρίτες (XOS)<br> οι οποίοι ασκούν <br> πολύτιμη προβιοτική δράση με σχεδόν μηδενική θερμιδική αξία. <br>Βελτιώνει συνολικά την υγεία του αγαπημένου σας κατοικίδιου καθώς:<br> Ενισχύει το ανοσοποιητικό σύστημα, αυξάνει την πεπτικότητα<br> και αποτελεί φυσικό αντιοξειδωτικό.";
+
+      document.getElementById('desc5').innerHTML = "Λιχουδιές με <b>κοτόπουλο,</b> για <b>ενήλικους σκύλους.</b><br> Μαγειρεύονται σε πολύ χαμηλή θερμοκρασία προκειμένου να <br>διατηρήσουν όλα τα <br> θρεπτικά συστατικά τους. Δεν περιέχουν γλουτένη, τεχνικά χρώματα, ΓΤΟ <br> και τρανς λιπαρά οξέα. Η μικρή τους συσκευασία σάς βοηθά <br> να τα έχετε παντού <br> μαζί σας, σε βόλτες ή εκδρομές.";
+
+      document.getElementById('desc6').innerHTML = "Λιχουδιές με τραγανό περίβλημα και μαλακό πυρήνα, <br>με γεύση <b>μοσχάρι,</b> για ενήλικους σκύλους <br> από 10kg και άνω. Είναι πλούσιες σε βιταμίνες, <br> μεταλλικά άλατα και Ωμέγα-3 λιπαρά οξέα,<br> ενώ δεν περιέχουν τεχνητά χρώματα και αρώματα.<br> Συνδυάζουν τη θρεπτική αξία και τη γευστική απόλαυση <br> και θα ικανοποιήσουν απόλυτα το σκύλο σας. <br>";
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
-
-
