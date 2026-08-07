@@ -1,60 +1,147 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Γάτα </title>
+<title id="page-title"> Γάτα </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .cat-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .cat-container p {
+    line-height: 1.6;
+    text-align: justify;
+  }
+</style>
 </head>
 <body class="diatrofi_gata-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
-     </div>
+  <div class="logo"> Paw Corner </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>
-<img src="pawcorner.jpg"width="200" height="200">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<!-- Η εικόνα τοποθετείται σωστά εδώ, έξω από το nav -->
+<img src="pawcorner.jpg" width="200" height="200" alt="Paw Corner">
+</header>
+
+<div class="cat-container">
+<h1 id="main-heading"> Κατηγορίες </h1>
+<ul id="cat-categories">
+  <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+  <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
 </ul>
-</nav></header>
-<h1> Κατηγορίες </h1>
-<ul>
-<li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
-<li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
-</ul>
-<h2> Η διατροφή της γάτας σας είναι ιδιαίτερα σημαντική! </h2>
+
+<h2 id="sub-heading"> Η διατροφή της γάτας σας είναι ιδιαίτερα σημαντική! </h2>
 <table border="0" align="center">
 <tr> 
-<td align="center" width="200">
-<img src="gates_diatrofi01.jpg"width="200" height="200">
-<p> Πλήρης ολιστική τροφή, χωρίς σιτηρά, με κοτόπουλο <br>
-και γαλοπούλα, για ενήλικες στειρωμένες γάτες. <br>Η τροφή αυτή περιέχει πολτό τεύτλων <br>
- και φρουκτοολιγοσακχαρίτες για την ομαλότερη εντερική λειτουργία, λιναρόσπορος <br>
- και λάδι σολομού για την καλύτερη υγεία του δέρματος, του τριχώματος, του εγκεφάλου <br>
- και της καρδιάς καθώς και yucca schidigera και cranberries, πλούσια πηγή <br>
- αντιοξειδωτικών συστατικών, που προστατεύουν την τροφή της από την οξείδωση <br>
- και διατηρούν φρέσκα όλα τα θρεπτικά συστατικά. </p>
- </td>
-<td align="center" width="200">
- <img src="gates_diatrofi02.jpg"width="200" height="200">
- <p> Πλήρης τροφή με πουλερικά,<br> για ενήλικες γάτες. Η τροφή αυτή <br>
- είναι ειδικά σχεδιασμένη για την προστασία του ουροποιητικού συστήματος.<br>
- Η υψηλής ποιότητας, εύκολα αφομοιώσιμη πρωτεΐνη και η μειωμένη <br>
- περιεκτικότητα σε μαγνήσιο και φώσφορο μπορούν να μειώσουν <br>
- το pH των ούρων και έτσι να ανακουφίσουν την πίεση στο <br>
- ουροποιητικό σύστημα ως προληπτικό μέτρο.<br> </p> </td>
- </tr>
- </table>
- <br/><br/>
+  <td align="center" width="200">
+    <img src="gates_diatrofi01.jpg" width="200" height="200" alt="Cat Food 1">
+    <p id="food1-desc"> Πλήρης ολιστική τροφή, χωρίς σιτηρά, με κοτόπουλο <br>
+    και γαλοπούλα, για ενήλικες στειρωμένες γάτες. <br>Η τροφή αυτή περιέχει πολτό τεύτλων <br>
+    και φρουκτοολιγοσακχαρίτες για την ομαλότερη εντερική λειτουργία, λιναρόσπορο <br>
+    και λάδι σολομού για την καλύτερη υγεία του δέρματος, του τριχώματος, του εγκεφάλου <br>
+    και της καρδιάς καθώς και yucca schidigera και cranberries, πλούσια πηγή <br>
+    αντιοξειδωτικών συστατικών, που προστατεύουν την τροφή της από την οξείδωση <br>
+    και διατηρούν φρέσκα όλα τα θρεπτικά συστατικά. </p>
+  </td>
+  <td align="center" width="200">
+    <img src="gates_diatrofi02.jpg" width="200" height="200" alt="Cat Food 2">
+    <p id="food2-desc"> Πλήρης τροφή με πουλερικά,<br> για ενήλικες γάτες. Η τροφή αυτή <br>
+    είναι ειδικά σχεδιασμένη για την προστασία του ουροποιητικού συστήματος.<br>
+    Η υψηλής ποιότητας, εύκολα αφομοιώσιμη πρωτεΐνη και η μειωμένη <br>
+    περιεκτικότητα σε μαγνήσιο και φώσφορο μπορούν να μειώσουν <br>
+    το pH των ούρων και έτσι να ανακουφίσουν την πίεση στο <br>
+    ουροποιητικό σύστημα ως προληπτικό μέτρο.<br> </p> 
+  </td>
+</tr>
+</table>
+</div>
+<br><br>
+
 <footer>
-<p> © 2026 Paw Corner </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<p> &copy; 2026 Paw Corner </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Cat";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "Categories";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html">Nutrition</a> </li>
+        <li> <a href="ygieini_metafora.html">Hygiene & Transport</a> </li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Your cat's nutrition is particularly important!";
+      document.getElementById('food1-desc').innerHTML = "Complete holistic food, grain-free, with chicken <br>and turkey, for adult sterilized cats. This food contains beet pulp <br>and fructooligosaccharides for smoother intestinal function, flaxseed <br>and salmon oil for better skin, coat, brain, <br>and heart health, as well as yucca schidigera and cranberries, a rich source <br>of antioxidant ingredients that protect its food from oxidation <br>and keep all nutrients fresh.";
+      
+      document.getElementById('food2-desc').innerHTML = "Complete food with poultry,<br> for adult cats. This food <br>is specially designed to protect the urinary tract.<br>High quality, easily digestible protein and reduced <br>magnesium and phosphorus content can lower <br>urine pH and thus relieve pressure on the <br>urinary system as a preventive measure.<br>";
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Γάτα";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Κατηγορίες";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+        <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Η διατροφή της γάτας σας είναι ιδιαίτερα σημαντική!";
+      document.getElementById('food1-desc').innerHTML = "Πλήρης ολιστική τροφή, χωρίς σιτηρά, με κοτόπουλο <br>και γαλοπούλα, για ενήλικες στειρωμένες γάτες. <br>Η τροφή αυτή περιέχει πολτό τεύτλων <br>και φρουκτοολιγοσακχαρίτες για την ομαλότερη εντερική λειτουργία, λιναρόσπορο <br>και λάδι σολομού για την καλύτερη υγεία του δέρματος, του τριχώματος, του εγκεφάλου <br>και της καρδιάς καθώς και yucca schidigera και cranberries, πλούσια πηγή <br>αντιοξειδωτικών συστατικών, που προστατεύουν την τροφή της από την οξείδωση <br>και διατηρούν φρέσκα όλα τα θρεπτικά συστατικά.";
+      
+      document.getElementById('food2-desc').innerHTML = "Πλήρης τροφή με πουλερικά,<br> για ενήλικες γάτες. Η τροφή αυτή <br>είναι ειδικά σχεδιασμένη για την προστασία του ουροποιητικού συστήματος.<br>Η υψηλής ποιότητας, εύκολα αφομοιώσιμη πρωτεΐνη και η μειωμένη <br>περιεκτικότητα σε μαγνήσιο και φώσφορο μπορούν να μειώσουν <br>το pH των ούρων και έτσι να ανακουφίσουν την πίεση στο <br>ουροποιητικό σύστημα ως προληπτικό μέτρο.<br>";
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
