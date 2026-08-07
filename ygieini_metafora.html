@@ -1,94 +1,199 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Γάτα </title>
+<title id="page-title"> Υγιεινή & Μεταφορά Γάτας </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .hygiene-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  table td {
+    padding: 15px;
+    vertical-align: top;
+  }
+</style>
 </head>
 <body class="ygieini_metafora-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
+  <div class="logo"> Paw Corner </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<img src="pawcorner.jpg" width="200" height="200" alt="Paw Corner">
+</header>
 
-<img src="pawcorner.jpg"width="200" height="200">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
+<div class="hygiene-container">
+<h1 id="main-heading"> Κατηγορίες </h1>
+<ul id="cat-categories">
+  <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+  <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
 </ul>
-</nav></header>
-<h1> Κατηγορίες </h1>
-<ul>
-<li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
-<li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
-</ul>
- <p> Χαρίστε στη γάτα σας την καθαριότητα <br> 
- και τη φροντίδα που της αξίζει! Επιλέξτε <br>
- μέσα από ποιοτικά προϊόντα υγιεινής! </p>
+
+<p id="intro-desc"> Χαρίστε στη γάτα σας την καθαριότητα <br> 
+και τη φροντίδα που της αξίζει! Επιλέξτε <br> 
+μέσα από ποιοτικά προϊόντα υγιεινής! </p>
+
 <table border="0" align="center">
 <tr> 
-<td align="center" width="200">
-<img src="gates_ygieini01.jpg"width="200" height="200">
-<p> Πρωτοποριακή, κλειστή τουαλέτα για τη γάτα σας. <br>
- Ένα ιδανικό προϊόν που εξυπηρετεί τις ανάγκες της γάτας <br> 
- και κρατάει το σπίτι σας καθαρό. Οι διαρροές αποκλείονται <br>
- και η άμμος στο πάτωμα αποτελεί παρελθόν. Το μέγεθός της <br>
- καλύπτει από ένα μικρό γατάκι μέχρι την πιο μεγάλη γάτα. <br>
- Είναι πανεύκολη στη συναρμολόγηση και είναι κατασκευασμένη <br>
- από 95% ανακυκλωμένο πλαστικό, μακράς διαρκείας.</p>
- </td>
- <td align="center" width="200">
- <img src="gates_ygieini02.jpg"width="200"height="200">
- <p> Κλειστή τουαλέτα που προσφέρει ιδιωτικότητα <br> 
- και καθαριότητα στη γάτα σας, ενώ διατηρεί τον χώρο σας <br> 
- χωρίς δυσάρεστες οσμές και διασκορπισμένα απορρίμματα.<br>
- Με πρακτικό ανακλινόμενο καπάκι και φίλτρο ενεργού άνθρακα, <br>
- εξασφαλίζει εύκολο καθαρισμό και φρέσκια ατμόσφαιρα στο σπίτι.</p>
- </td>
-<td align="center" width="200">
-<img src="gates_ygieini03.jpg"width="200" height="200"> 
-<p> Συγκολλητική άμμος από λευκό μπετονίτη με άρωμα λεβάντας, <br>
-ιδανική για την τουαλέτα της γάτας σας. Σχηματίζει άμεσα συμπαγείς <br>
-σβόλους για εύκολο καθάρισμα, προσφέρει υψηλή απορροφητικότητα <br>
-και εξουδετερώνει αποτελεσματικά τις δυσάρεστες οσμές.</p>
-</td>
+  <td align="center" width="200">
+    <img src="gates_ygieini01.jpg" width="200" height="200" alt="Cat Litter Box 1">
+    <p id="desc1"> Πρωτοποριακή, κλειστή τουαλέτα για τη γάτα σας. <br> 
+    Ένα ιδανικό προϊόν που εξυπηρετεί τις ανάγκες της γάτας <br> 
+    και κρατάει το σπίτι σας καθαρό. Οι διαρροές αποκλείονται <br> 
+    και η άμμος στο πάτωμα αποτελεί παρελθόν. Το μέγεθός της <br> 
+    καλύπτει από ένα μικρό γατάκι μέχρι την πιο μεγάλη γάτα. <br> 
+    Είναι πανεύκολη στη συναρμολόγηση και είναι κατασκευασμένη <br> 
+    από 95% ανακυκλωμένο πλαστικό, μακράς διαρκείας.</p>
+  </td>
+  <td align="center" width="200">
+    <img src="gates_ygieini02.jpg" width="200" height="200" alt="Cat Litter Box 2">
+    <p id="desc2"> Κλειστή τουαλέτα που προσφέρει ιδιωτικότητα <br> 
+    και καθαριότητα στη γάτα σας, ενώ διατηρεί τον χώρο σας <br> 
+    χωρίς δυσάρεστες οσμές και διασκορπισμένα απορρίμματα.<br>
+    Με πρακτικό ανακλινόμενο καπάκι και φίλτρο ενεργού άνθρακα, <br> 
+    εξασφαλίζει εύκολο καθαρισμό και φρέσκια ατμόσφαιρα στο σπίτι.</p>
+  </td>
+  <td align="center" width="200">
+    <img src="gates_ygieini03.jpg" width="200" height="200" alt="Cat Litter"> 
+    <p id="desc3"> Συγκολλητική άμμος από λευκό μπετονίτη με άρωμα λεβάντας, <br>
+    ιδανική για την τουαλέτα της γάτας σας. Σχηματίζει άμεσα συμπαγείς <br>
+    σβόλους για εύκολο καθάρισμα, προσφέρει υψηλή απορροφητικότητα <br>
+    και εξουδετερώνει αποτελεσματικά τις δυσάρεστες οσμές.</p>
+  </td>
 </tr>
 </table>
-<h2> Μεταφέρετε την γάτα σας με απόλυτη ασφάλεια <br>
+
+<h2 id="transport-heading"> Μεταφέρετε την γάτα σας με απόλυτη ασφάλεια <br>
 με κομψές τσάντες μεταφοράς! </h2>
 <table border="0" align="center">
 <tr> 
-<td align="center" width="200">
-<img src="gates_paixnidi03.jpg"width="200" height="200"> 
-<p> Τσάντα μεταφοράς για γατούλες.Η τσάντα αυτή προσφέρει στο<br>
-κατοικίδιό σας ορατότητα ενώ έχει οπές που επιτρέπουν τον άριστο <br>
- εξαερισμό. Έχει χειρολαβή αλλά και ιμάντες πλάτης ώστε να έχετε <br>
- τα χέρια σας ελεύθερα. Επίσης, έχει εξωτερικές θήκες όπου μπορείτε <br>
- να αποθηκεύετε τα απαραίτητα αξεσουάρ για τη βόλτα σας.</p> </td>
- <td align="center" width="200">
-<img src="gates_paixnidia04.jpg"width="200" height="200">
-<p> Τσάντα μεταφοράς με χαριτωμένο σχέδιο, <br>
-για γάτες και μικρόσωμους σκύλους. Το διαφανές <br>
- μπροστινό μέρος επιτρέπει στο κατοικίδιό σας να έχει<br>
- ορατότητα στο εξωτερικό περιβάλλον, προσφέροντάς <br>
- του αίσθημα ασφάλειας, ενώ οι πολλαπλές οπές μπροστά<br>
- και πλάγια εξασφαλίζουν τον ιδανικό αερισμό. </p> </td>
- <td align="center" width="200">
-<img src="gates_paixnidia05.jpg"width="200" height="200">
-<p> Τσάντα μεταφοράς με χαριτωμένο σχέδιο </p> </td>
+  <td align="center" width="200">
+    <img src="gates_paixnidi03.jpg" width="200" height="200" alt="Cat Transport Bag 1"> 
+    <p id="desc4"> Τσάντα μεταφοράς για γατούλες. Η τσάντα αυτή προσφέρει στο<br>
+    κατοικίδιό σας ορατότητα ενώ έχει οπές που επιτρέπουν τον άριστο <br>
+    εξαερισμό. Έχει χειρολαβή αλλά και ιμάντες πλάτης ώστε να έχετε <br>
+    τα χέρια σας ελεύθερα. Επίσης, έχει εξωτερικές θήκες όπου μπορείτε <br>
+    να αποθηκεύετε τα απαραίτητα αξεσουάρ για τη βόλτα σας.</p> 
+  </td>
+  <td align="center" width="200">
+    <img src="gates_paixnidia04.jpg" width="200" height="200" alt="Cat Transport Bag 2">
+    <p id="desc5"> Τσάντα μεταφοράς με χαριτωμένο σχέδιο, <br>
+    για γάτες και μικρόσωμους σκύλους. Το διαφανές <br>
+    μπροστινό μέρος επιτρέπει στο κατοικίδιό σας να έχει<br>
+    ορατότητα στο εξωτερικό περιβάλλον, προσφέροντάς <br>
+    1του αίσθημα ασφάλειας, ενώ οι πολλαπλές οπές μπροστά<br>
+    και πλάγια εξασφαλίζουν τον ιδανικό αερισμό. </p> 
+  </td>
+  <td align="center" width="200">
+    <img src="gates_paixnidia05.jpg" width="200" height="200" alt="Cat Transport Bag 3">
+    <p id="desc6"> Τσάντα μεταφοράς με χαριτωμένο σχέδιο </p> 
+  </td>
 </tr>
 </table>
 <br/><br/>
+</div>
+
 <footer>
 <p> © 2026 Paw Corner </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Cat Hygiene & Transport";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "Categories";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html"> Nutrition </a> </li>
+        <li> <a href="ygieini_metafora.html"> Hygiene & Transport </a> </li>
+      `;
+
+      document.getElementById('intro-desc').innerHTML = "Give your cat the cleanliness <br>and care it deserves! Choose <br>from quality hygiene products!";
+
+      document.getElementById('desc1').innerHTML = "Innovative, enclosed litter box for your cat. <br>An ideal product that serves your cat's needs <br>and keeps your home clean. Leaks are prevented <br>and litter on the floor is a thing of the past. Its size <br>covers everything from a small kitten to the largest cat. <br>It is extremely easy to assemble and is made <br>of 95% long-lasting recycled plastic.";
+      document.getElementById('desc2').innerHTML = "Enclosed litter box that offers privacy <br>and cleanliness to your cat, while keeping your space <br>free from unpleasant odors and scattered waste.<br>With a practical tilting lid and active carbon filter, <br>it ensures easy cleaning and a fresh atmosphere at home.";
+      document.getElementById('desc3').innerHTML = "Clumping white bentonite cat litter with lavender scent, <br>ideal for your cat's litter box. It instantly forms solid <br>clumps for easy cleaning, offers high absorbency <br>and effectively neutralizes unpleasant odors.";
+
+      document.getElementById('transport-heading').innerHTML = "Transport your cat with absolute safety <br>with elegant transport bags!";
+      document.getElementById('desc4').innerHTML = "Transport bag for kitties. This bag offers your<br>pet visibility while having holes that allow optimal <br>ventilation. It has a handle and back straps so you can keep <br>your hands free. Also, it has external pockets where you can <br>store the necessary accessories for your walk.";
+      document.getElementById('desc5').innerHTML = "Transport bag with a cute design, <br>for cats and small dogs. The transparent <br>front allows your pet to have <br>visibility of the external environment, offering <br>a sense of security, while multiple holes in the front <br>and sides ensure ideal ventilation.";
+      document.getElementById('desc6').innerText = "Transport bag with a cute design";
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Υγιεινή & Μεταφορά Γάτας";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Κατηγορίες";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+        <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
+      `;
+
+      document.getElementById('intro-desc').innerHTML = " Χαρίστε στη γάτα σας την καθαριότητα <br> και τη φροντίδα που της αξίζει! Επιλέξτε <br> μέσα από ποιοτικά προϊόντα υγιεινής! ";
+
+      document.getElementById('desc1').innerHTML = " Πρωτοποριακή, κλειστή τουαλέτα για τη γάτα σας. <br> Ένα ιδανικό προϊόν που εξυπηρετεί τις ανάγκες της γάτας <br> και κρατάει το σπίτι σας καθαρό. Οι διαρροές αποκλείονται <br> και η άμμος στο πάτωμα αποτελεί παρελθόν. Το μέγεθός της <br> καλύπτει από ένα μικρό γατάκι μέχρι την πιο μεγάλη γάτα. <br> Είναι πανεύκολη στη συναρμολόγηση και είναι κατασκευασμένη <br> από 95% ανακυκλωμένο πλαστικό, μακράς διαρκείας.";
+      document.getElementById('desc2').innerHTML = " Κλειστή τουαλέτα που προσφέρει ιδιωτικότητα <br> και καθαριότητα στη γάτα σας, ενώ διατηρεί τον χώρο σας <br> χωρίς δυσάρεστες οσμές και διασκορπισμένα απορρίμματα.<br> Με πρακτικό ανακλινόμενο καπάκι και φίλτρο ενεργού άνθρακα, <br> εξασφαλίζει εύκολο καθαρισμό και φρέσκια ατμόσφαιρα στο σπίτι.";
+      document.getElementById('desc3').innerHTML = " Συγκολλητική άμμος από λευκό μπετονίτη με άρωμα λεβάντας, <br> ιδανική για την τουαλέτα της γάτας σας. Σχηματίζει άμεσα συμπαγείς <br> σβόλους για εύκολο καθάρισμα, προσφέρει υψηλή απορροφητικότητα <br> και εξουδετερώνει αποτελεσματικά τις δυσάρεστες οσμές.";
+
+      document.getElementById('transport-heading').innerHTML = " Μεταφέρετε την γάτα σας με απόλυτη ασφάλεια <br>με κομψές τσάντες μεταφοράς! ";
+      document.getElementById('desc4').innerHTML = " Τσάντα μεταφοράς για γατούλες. Η τσάντα αυτή προσφέρει στο<br> κατοικίδιό σας ορατότητα ενώ έχει οπές που επιτρέπουν τον άριστο <br> εξαερισμό. Έχει χειρολαβή αλλά και ιμάντες πλάτης ώστε να έχετε <br> τα χέρια σας ελεύθερα. Επίσης, έχει εξωτερικές θήκες όπου μπορείτε <br> να αποθηκεύετε τα απαραίτητα αξεσουάρ για τη βόλτα σας.";
+      document.getElementById('desc5').innerHTML = " Τσάντα μεταφοράς με χαριτωμένο σχέδιο, <br> για γάτες και μικρόσωμους σκύλους. Το διαφανές <br> μπροστινό μέρος επιτρέπει στο κατοικίδιό σας να έχει<br> ορατότητα στο εξωτερικό περιβάλλον, προσφέροντάς <br> του αίσθημα ασφάλειας, ενώ οι πολλαπλές οπές μπροστά<br> και πλάγια εξασφαλίζουν τον ιδανικό αερισμό. ";
+      document.getElementById('desc6').innerText = " Τσάντα μεταφοράς με χαριτωμένο σχέδιο ";
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
