@@ -1,58 +1,166 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Άρθρα </title>
+<title id="page-title"> Άρθρα </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .articles-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .articles-container ul {
+    line-height: 1.8;
+  }
+</style>
 </head>
 <body class="arthra-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
-     </div>
+  <div class="logo"> Paw Corner </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>
-<img src="pawcorner.jpg"width="200" height="200">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
-</ul>
-</nav></header>
-<h1> Πρώτη Μέρα στο Σπίτι με το Κουτάβι σας </h1>
-<img src="koutavi.jpg"width="200" height="200">
-<ul>
-<li> Ετοιμάστε έναν ήσυχο, ζεστό χώρο όπου θα νιώθει ασφάλεια.</li>
-<li> Δώστε του χρόνο να εξερευνήσει το σπίτι χωρίς πίεση. </li>
-<li>Φροντίστε να έχει πάντα φρέσκο νερό και το γεύμα που έχει συνηθίσει.</li> 
-<li>Περιορίστε την πρόσβαση σε επικίνδυνα σημεία (σκάλες, καλώδια κ.λπ.). </li>
-<li> Κρατήστε ήρεμη στάση και μιλήστε του με γλυκό τόνο για να χτίσετε εμπιστοσύνη.</li> 
-<li>Ξεκινήστε από την πρώτη μέρα μια απλή ρουτίνα (φαγητό, βόλτα, ύπνος). </li>
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<!-- Η εικόνα τοποθετείται σωστά εδώ, έξω από το nav -->
+<img src="pawcorner.jpg" width="200" height="200" alt="Paw Corner">
+</header>
+
+<div class="articles-container">
+<h1 id="main-heading"> Πρώτη Μέρα στο Σπίτι με το Κουτάβι σας </h1>
+<img src="koutavi.jpg" width="200" height="200" alt="Puppy">
+<ul id="puppy-list">
+  <li> Ετοιμάστε έναν ήσυχο, ζεστό χώρο όπου θα νιώθει ασφάλεια.</li>
+  <li> Δώστε του χρόνο να εξερευνήσει το σπίτι χωρίς πίεση. </li>
+  <li> Φροντίστε να έχει πάντα φρέσκο νερό και το γεύμα που έχει συνηθίσει.</li> 
+  <li> Περιορίστε την πρόσβαση σε επικίνδυνα σημεία (σκάλες, καλώδια κ.λπ.). </li>
+  <li> Κρατήστε ήρεμη στάση και μιλήστε του με γλυκό τόνο για να χτίσετε εμπιστοσύνη.</li> 
+  <li> Ξεκινήστε από την πρώτη μέρα μια απλή ρουτίνα (φαγητό, βόλτα, ύπνος). </li>
 </ul>
 <hr><hr>
-<h2> Tips Φροντίδας νεογέννητων γατιών </h2>
-<img src="gataki.jpg"width="200" height="200">
-<ul> 
-<li> Διατηρήστε τα ζεστά γιατί τα νεογέννητα δεν μπορούν να ρυθμίσουν τη <br>
- θερμοκρασία τους. </li>
- <li>Αν δεν υπάρχει μητέρα, χρησιμοποιήστε ειδικό γάλα για γατάκια (όχι αγελαδινό). </li>
-<li> Ταΐζετε μικρές ποσότητες συχνά, σύμφωνα με την ηλικία τους. </li>
-<li> Βοηθήστε τα με απαλό καθάρισμα μετά το τάισμα για την υγιεινή τους. </li>
-<li> Συμβουλευτείτε κτηνίατρο για έλεγχο και σωστή καθοδήγηση από τις πρώτες ημέρες.</li> 
-<li> Δημιουργήστε μια ήσυχη, καθαρή και προστατευμένη φωλίτσα, μακριά από ρεύματα αέρα.</li> 
-<li> Ζυγίζετε τα καθημερινά για να βεβαιωθείτε ότι παίρνουν σταθερά βάρος.</li> 
-<li> Χειριστείτε τα απαλά και μόνο όταν είναι απαραίτητο τις πρώτες ημέρες.</li>
-<li> Παρατηρείτε για σημάδια αδυναμίας, συνεχές κλάμα ή μειωμένη όρεξη.</li> 
-<li> Φροντίστε η μητέρα (αν υπάρχει) να έχει ποιοτική τροφή και ήρεμο περιβάλλον.</li>
+<h2 id="sub-heading"> Tips Φροντίδας νεογέννητων γατιών </h2>
+<img src="gataki.jpg" width="200" height="200" alt="Kitten">
+<ul id="kitten-list"> 
+  <li> Διατηρήστε τα ζεστά γιατί τα νεογέννητα δεν μπορούν να ρυθμίσουν τη θερμοκρασία τους. </li>
+  <li> Αν δεν υπάρχει μητέρα, χρησιμοποιήστε ειδικό γάλα για γατάκια (όχι αγελαδινό). </li>
+  <li> Ταΐζετε μικρές ποσότητες συχνά, σύμφωνα με την ηλικία τους. </li>
+  <li> Βοηθήστε τα με απαλό καθάρισμα μετά το τάισμα για την υγιεινή τους. </li>
+  <li> Συμβουλευτείτε κτηνίατρο για έλεγχο και σωστή καθοδήγηση από τις πρώτες ημέρες.</li> 
+  <li> Δημιουργήστε μια ήσυχη, καθαρή και προστατευμένη φωλίτσα, μακριά από ρεύματα αέρα.</li> 
+  <li> Ζυγίζετε τα καθημερινά για να βεβαιωθείτε ότι παίρνουν σταθερά βάρος.</li> 
+  <li> Χειριστείτε τα απαλά και μόνο όταν είναι απαραίτητο τις πρώτες ημέρες.</li>
+  <li> Παρατηρείτε για σημάδια αδυναμίας, συνεχές κλάμα ή μειωμένη όρεξη.</li> 
+  <li> Φροντίστε η μητέρα (αν υπάρχει) να έχει ποιοτική τροφή και ήρεμο περιβάλλον.</li>
 </ul>
+</div>
+
 <footer>
 <p> ©2026 Paw Corner </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Articles";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "First Day at Home with Your Puppy";
+      document.getElementById('puppy-list').innerHTML = `
+        <li>Prepare a quiet, warm space where they will feel safe.</li>
+        <li>Give them time to explore the house without pressure.</li>
+        <li>Make sure they always have fresh water and the food they are used to.</li>
+        <li>Limit access to dangerous areas (stairs, cables, etc.).</li>
+        <li>Keep a calm attitude and speak to them in a gentle tone to build trust.</li>
+        <li>Start a simple routine from day one (food, walk, sleep).</li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Newborn Kitten Care Tips";
+      document.getElementById('kitten-list').innerHTML = `
+        <li>Keep them warm because newborns cannot regulate their temperature.</li>
+        <li>If there is no mother, use special kitten milk formula (not cow's milk).</li>
+        <li>Feed small amounts frequently, according to their age.</li>
+        <li>Help them with gentle cleaning after feeding for their hygiene.</li>
+        <li>Consult a veterinarian for a check-up and proper guidance from the very first days.</li>
+        <li>Create a quiet, clean, and protected nest, away from drafts.</li>
+        <li>Weigh them daily to make sure they are steadily gaining weight.</li>
+        <li>Handle them gently and only when necessary during the first days.</li>
+        <li>Watch for signs of weakness, continuous crying, or decreased appetite.</li>
+        <li>Ensure the mother (if present) has quality food and a calm environment.</li>
+      `;
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Άρθρα";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Πρώτη Μέρα στο Σπίτι με το Κουτάβι σας";
+      document.getElementById('puppy-list').innerHTML = `
+        <li> Ετοιμάστε έναν ήσυχο, ζεστό χώρο όπου θα νιώθει ασφάλεια.</li>
+        <li> Δώστε του χρόνο να εξερευνήσει το σπίτι χωρίς πίεση. </li>
+        <li> Φροντίστε να έχει πάντα φρέσκο νερό και το γεύμα που έχει συνηθίσει.</li> 
+        <li> Περιορίστε την πρόσβαση σε επικίνδυνα σημεία (σκάλες, καλώδια κ.λπ.). </li>
+        <li> Κρατήστε ήρεμη στάση και μιλήστε του με γλυκό τόνο για να χτίσετε εμπιστοσύνη.</li> 
+        <li> Ξεκινήστε από την πρώτη μέρα μια απλή ρουτίνα (φαγητό, βόλτα, ύπνος). </li>
+      `;
+
+      document.getElementById('sub-heading').innerText = "Tips Φροντίδας νεογέννητων γατιών";
+      document.getElementById('kitten-list').innerHTML = `
+        <li> Διατηρήστε τα ζεστά γιατί τα νεογέννητα δεν μπορούν να ρυθμίσουν τη θερμοκρασία τους. </li>
+        <li> Αν δεν υπάρχει μητέρα, χρησιμοποιήστε ειδικό γάλα για γατάκια (όχι αγελαδινό). </li>
+        <li> Ταΐζετε μικρές ποσότητες συχνά, σύμφωνα με την ηλικία τους. </li>
+        <li> Βοηθήστε τα με απαλό καθάρισμα μετά το τάισμα για την υγιεινή τους. </li>
+        <li> Συμβουλευτείτε κτηνίατρο για έλεγχο και σωστή καθοδήγηση από τις πρώτες ημέρες.</li> 
+        <li> Δημιουργήστε μια ήσυχη, καθαρή και προστατευμένη φωλίτσα, μακριά από ρεύματα αέρα.</li> 
+        <li> Ζυγίζετε τα καθημερινά για να βεβαιωθείτε ότι παίρνουν σταθερά βάρος.</li> 
+        <li> Χειριστείτε τα απαλά και μόνο όταν είναι απαραίτητο τις πρώτες ημέρες.</li>
+        <li> Παρατηρείτε για σημάδια αδυναμίας, συνεχές κλάμα ή μειωμένη όρεξη.</li> 
+        <li> Φροντίστε η μητέρα (αν υπάρχει) να έχει ποιοτική τροφή και ήρεμο περιβάλλον.</li>
+      `;
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
