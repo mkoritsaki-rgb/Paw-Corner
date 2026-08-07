@@ -1,79 +1,190 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Paw Corner </title>
+<title id="page-title"> Paw Corner </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .home-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  form {
+    margin-top: 20px;
+  }
+  form input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+</style>
 </head>
 <body>
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
 <div class="logo"> Paw Corner </div>
-  </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>   
 <ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href= "alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a> </li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a> </li>
+<li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+<li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+<li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+<li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+<li> <a href="arthra.html" id="nav-articles"> Άρθρα </a> </li>
+<li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a> </li>
 </ul>
 </nav></header>
+
+<div class="home-container">
 <section id="hero">
 <div class="hero-content">
-<h1> Καλώς ήρθατε στο Paw Corner! </h1>
-<p>  Είναι ένας χώρος όπου η <b> αγάπη </b> για τα κατοικίδια <br>
+<h1 id="hero-title"> Καλώς ήρθατε στο Paw Corner! </h1>
+<p id="hero-desc">  Είναι ένας χώρος όπου η <b> αγάπη </b> για τα κατοικίδια <br>
 συναντά την <b> ποιότητα </b> και τη <b> φροντίδα </b>. <br>
   <br> Εδώ θα βρείτε προσεκτικά επιλεγμένα προϊόντα για <br> <b>σκύλους</b>
 και για <b>γάτες</b>. <br> Από τροφές και παιχνίδια μέχρι <br> αξεσουάρ
 και είδη περιποίησης. <br>
 Για εμάς, κάθε πατουσάκι αξίζει πάντα <br>
-το καλύτερο! </p>  <br> <br> 
-<h2> Γιατί τα κατοικίδια δεν είναι απλά <br>
+το καλύτερο! </p>  <br> <br>  
+<h2 id="hero-subtitle"> Γιατί τα κατοικίδια δεν είναι απλά <br>
 ζώα αλλά  ΟΙΚΟΓΕΝΕΙΑ!</h2>
 </div>
 </section>
-<h2> Σκύλος ή Γάτα; Ποιο κατοικίδιο σου ταιριάζει; </h2>
+<h2 id="quiz-main-heading"> Σκύλος ή Γάτα; Ποιο κατοικίδιο σου ταιριάζει; </h2>
 
-<form action="quiz.php" method="post"> 
+<form action="quiz.php" method="post">  
 
-  <p>1. Πόσο χρόνο μπορείς να αφιερώνεις καθημερινά στο κατοικίδιο σου;</p>
-  <input type="radio" name="q1" value="dog"> Α. Μου αρέσουν οι βόλτες και η καθημερινή ενασχόληση<br>
-  <input type="radio" name="q1" value="cat"> Β. Θέλω λίγη ανεξαρτησία<br>
+  <p id="q1-text">1. Πόσο χρόνο μπορείς να αφιερώνεις καθημερινά στο κατοικίδιο σου;</p>
+  <input type="radio" name="q1" value="dog"> <span id="q1-opt1">Α. Μου αρέσουν οι βόλτες και η καθημερινή ενασχόληση</span><br>
+  <input type="radio" name="q1" value="cat"> <span id="q1-opt2">Β. Θέλω λίγη ανεξαρτησία</span><br>
 
-  <p>2. Πώς φαντάζεσαι την καθημερινότητά σου;</p>
-  <input type="radio" name="q2" value="dog"> Α. Παιχνίδι, βόλτες στο πάρκο<br>
-  <input type="radio" name="q2" value="cat"> Β. Χαλάρωση και ήρεμες στιγμές στο σπίτι
+  <p id="q2-text">2. Πώς φαντάζεσαι την καθημερινότητά σου;</p>
+  <input type="radio" name="q2" value="dog"> <span id="q2-opt1">Α. Παιχνίδι, βόλτες στο πάρκο</span><br>
+  <input type="radio" name="q2" value="cat"> <span id="q2-opt2">Β. Χαλάρωση και ήρεμες στιγμές στο σπίτι</span>
 
-  <p>3. Πόσο σημαντική είναι για εσένα η ανεξαρτησία του ζώου;</p>
-  <input type="radio"  name="q3" value="dog"> Α. Θέλω να με χρειάζεται και να με ακολουθεί παντού<br>
-  <input type="radio" name="q3" value="cat">Β. Μου αρέσει να έχει τον δικό του χώρο και ρυθμό.
+  <p id="q3-text">3. Πόσο σημαντική είναι για εσένα η ανεξαρτησία του ζώου;</p>
+  <input type="radio" name="q3" value="dog"> <span id="q3-opt1">Α. Θέλω να με χρειάζεται και να με ακολουθεί παντού</span><br>
+  <input type="radio" name="q3" value="cat"><span id="q3-opt2">Β. Μου αρέσει να έχει τον δικό του χώρο και ρυθμό.</span>
 
-  <p>4. Πώς διαχειρίζεσαι την ευθύνη;</p>
-  <input type="radio" name="q4" value="dog"> Α. Την διαχειρίζομαι καλά. Δεν με πειράζουν οι σταθερές βόλτες και το πρόγραμμα<br>
-  <input type="radio" name="q4" value="cat"> Β. Θέλω μεγαλύτερη ευελιξία στην καθημερινότητα.<br>
+  <p id="q4-text">4. Πώς διαχειρίζεσαι την ευθύνη;</p>
+  <input type="radio" name="q4" value="dog"> <span id="q4-opt1">Α. Την διαχειρίζομαι καλά. Δεν με πειράζουν οι σταθερές βόλτες και το πρόγραμμα</span><br>
+  <input type="radio" name="q4" value="cat"> <span id="q4-opt2">Β. Θέλω μεγαλύτερη ευελιξία στην καθημερινότητα.</span><br>
 
-  <p>5. Τι σε εκφράζει περισσότερο;</p>
-  <input type="radio"  name="q5" value="dog">Α. Πίστη, ενέργεια, εξωστρέφεια.<br>
-  <input type="radio" name="q5" value="cat">Β. Μυστήριο, χάρη, αυτονομία<br>
-<input type="Submit" value="Υποβολή">  <br>
+  <p id="q5-text">5. Τι σε εκφράζει περισσότερο;</p>
+  <input type="radio" name="q5" value="dog"><span id="q5-opt1">Α. Πίστη, ενέργεια, εξωστρέφεια.</span><br>
+  <input type="radio" name="q5" value="cat"><span id="q5-opt2">Β. Μυστήριο, χάρη, αυτονομία</span><br>
+<input type="submit" id="submit-btn" value="Υποβολή">  <br>
 </form>
+</div>
+
 <footer>
 <div class="footer-content">
-<p> @ 2026 Paw Corner </p>
+<p> © 2026 Paw Corner </p>
 <p> Email: paw_corner@hotmail.com </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </div>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Paw Corner";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('hero-title').innerText = "Welcome to Paw Corner!";
+      document.getElementById('hero-desc').innerHTML = "It is a space where <b>love</b> for pets <br>meets <b>quality</b> and <b>care</b>. <br><br>Here you will find carefully selected products for <br><b>dogs</b> and <b>cats</b>. <br>From food and toys to <br>accessories and grooming supplies. <br>For us, every little paw always deserves <br>the best!";
+      document.getElementById('hero-subtitle').innerHTML = "Because pets are not just <br>animals, they are FAMILY!";
+
+      document.getElementById('quiz-main-heading').innerText = "Dog or Cat? Which pet suits you?";
+      document.getElementById('q1-text').innerText = "1. How much time can you spend daily with your pet?";
+      document.getElementById('q1-opt1').innerText = "A. I like walks and daily engagement";
+      document.getElementById('q1-opt2').innerText = "B. I want a bit of independence";
+
+      document.getElementById('q2-text').innerText = "2. How do you imagine your daily life?";
+      document.getElementById('q2-opt1').innerText = "A. Play, walks in the park";
+      document.getElementById('q2-opt2').innerText = "B. Relaxation and quiet moments at home";
+
+      document.getElementById('q3-text').innerText = "3. How important is the animal's independence to you?";
+      document.getElementById('q3-opt1').innerText = "A. I want it to need me and follow me everywhere";
+      document.getElementById('q3-opt2').innerText = "B. I like it to have its own space and rhythm.";
+
+      document.getElementById('q4-text').innerText = "4. How do you handle responsibility?";
+      document.getElementById('q4-opt1').innerText = "A. I handle it well. I don't mind fixed walks and a schedule";
+      document.getElementById('q4-opt2').innerText = "B. I want more flexibility in my daily routine.";
+
+      document.getElementById('q5-text').innerText = "5. What expresses you the most?";
+      document.getElementById('q5-opt1').innerText = "A. Loyalty, energy, extroversion.";
+      document.getElementById('q5-opt2').innerText = "B. Mystery, grace, autonomy";
+
+      document.getElementById('submit-btn').value = "Submit";
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Paw Corner";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('hero-title').innerText = "Καλώς ήρθατε στο Paw Corner!";
+      document.getElementById('hero-desc').innerHTML = " Είναι ένας χώρος όπου η <b> αγάπη </b> για τα κατοικίδια <br>συναντά την <b> ποιότητα </b> και τη <b> φροντίδα </b>. <br>  <br> Εδώ θα βρείτε προσεκτικά επιλεγμένα προϊόντα για <br> <b>σκύλους</b>και για <b>γάτες</b>. <br> Από τροφές και παιχνίδια μέχρι <br> αξεσουάρκαι είδη περιποίησης. <br>Για εμάς, κάθε πατουσάκι αξίζει πάντα <br>το καλύτερο! ";
+      document.getElementById('hero-subtitle').innerHTML = " Γιατί τα κατοικίδια δεν είναι απλά <br>ζώα αλλά  ΟΙΚΟΓΕΝΕΙΑ!";
+
+      document.getElementById('quiz-main-heading').innerText = "Σκύλος ή Γάτα; Ποιο κατοικίδιο σου ταιριάζει;";
+      document.getElementById('q1-text').innerText = "1. Πόσο χρόνο μπορείς να αφιερώνεις καθημερινά στο κατοικίδιο σου;";
+      document.getElementById('q1-opt1').innerText = "Α. Μου αρέσουν οι βόλτες και η καθημερινή ενασχόληση";
+      document.getElementById('q1-opt2').innerText = "Β. Θέλω λίγη ανεξαρτησία";
+
+      document.getElementById('q2-text').innerText = "2. Πώς φαντάζεσαι την καθημερινότητά σου;";
+      document.getElementById('q2-opt1').innerText = "Α. Παιχνίδι, βόλτες στο πάρκο";
+      document.getElementById('q2-opt2').innerText = "Β. Χαλάρωση και ήρεμες στιγμές στο σπίτι";
+
+      document.getElementById('q3-text').innerText = "3. Πόσο σημαντική είναι για εσένα η ανεξαρτησία του ζώου;";
+      document.getElementById('q3-opt1').innerText = "Α. Θέλω να με χρειάζεται και να με ακολουθεί παντού";
+      document.getElementById('q3-opt2').innerText = "Β. Μου αρέσει να έχει τον δικό του χώρο και ρυθμό.";
+
+      document.getElementById('q4-text').innerText = "4. Πώς διαχειρίζεσαι την ευθύνη;";
+      document.getElementById('q4-opt1').innerText = "Α. Την διαχειρίζομαι καλά. Δεν με πειράζουν οι σταθερές βόλτες και το πρόγραμμα";
+      document.getElementById('q4-opt2').innerText = "Β. Θέλω μεγαλύτερη ευελιξία στην καθημερινότητα.";
+
+      document.getElementById('q5-text').innerText = "5. Τι σε εκφράζει περισσότερο;";
+      document.getElementById('q5-opt1').innerText = "Α. Πίστη, ενέργεια, εξωστρέφεια.";
+      document.getElementById('q5-opt2').innerText = "Β. Μυστήριο, χάρη, αυτονομία";
+
+      document.getElementById('submit-btn').value = "Υποβολή";
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
-
-
- 
- 
- 
- 
