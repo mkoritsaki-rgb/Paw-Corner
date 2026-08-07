@@ -1,47 +1,134 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Επικοινωνία </title>
+<title id="page-title"> Επικοινωνία </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  form input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+  }
+  form input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body class="epikinonia-page">
 <header>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
+</div>
 <nav>
-<div class="logo"> Paw Corner </div>
-  </div>
+  <div class="logo"> Paw Corner </div>
   <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
   </div>   
-<img src="pawcorner.jpg"width="400" height="400">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
-</ul>
-</nav></header>
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<img src="pawcorner.jpg" width="400" height="400" alt="Paw Corner">
+</header>
 <hr>
-<h1> Επικοινωνία </h1>
+
+<div class="contact-container">
+<h1 id="main-heading"> Επικοινωνία </h1>
 <form name="Επικοινωνία" method="post" action="epikinonia.php">
-    <b>Όνομα:</b>
-    <input type="text" name="name"
+    <b id="label-name">Όνομα:</b>
+    <input type="text" id="input-name" name="name"
            value="Πληκτρολογήστε το όνομα σας εδώ" 
            size="35" maxlength="30"/>
 
-    <b>Μήνυμα:</b>
-    <input type="text" name="message"
+    <b id="label-message">Μήνυμα:</b>
+    <input type="text" id="input-message" name="message"
            value="Πληκτρολογήστε το μήνυμα σας εδώ" 
            size="35" maxlength="200"/>
 
-    <input type="submit" name="Submit" value="Αποστολή" />
+    <input type="submit" id="submit-btn" name="Submit" value="Αποστολή" />
 </form>
+</div>
+
 <footer>
 <p> ©2026 Paw Corner </p>
- <p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+ <p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
 </footer>
+
+<script>
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      document.getElementById('page-title').innerText = "Contact";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "Contact";
+      document.getElementById('label-name').innerText = "Name:";
+      document.getElementById('input-name').value = "Type your name here";
+      document.getElementById('label-message').innerText = "Message:";
+      document.getElementById('input-message').value = "Type your message here";
+      document.getElementById('submit-btn').value = "Send";
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Επικοινωνία";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Επικοινωνία";
+      document.getElementById('label-name').innerText = "Όνομα:";
+      document.getElementById('input-name').value = "Πληκτρολογήστε το όνομα σας εδώ";
+      document.getElementById('label-message').innerText = "Μήνυμα:";
+      document.getElementById('input-message').value = "Πληκτρολογήστε το μήνυμα σας εδώ";
+      document.getElementById('submit-btn').value = "Αποστολή";
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
 </body>
 </html>
-
