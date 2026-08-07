@@ -1,45 +1,128 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<title> Γάτα </title>
+<title id="page-title"> Γάτα </title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .translate-box {
+    float: right;
+    margin: 10px;
+  }
+  .translate-box select {
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .cat-main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .cat-main-container button {
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+</style>
 </head>
 <body class="gata-page">
 <header>
-<nav>
-<div class="logo"> Paw Corner </div>
-  </div>
-  <div class="owner">
-    <a href="../index.html">Μαίρη Κάντα</a>
-  </div>   
-<img src="pawcorner.jpg"width="200" height="200">
-<ul>
-<li> <a href="index.html"> Αρχική </a> </li>
-<li> <a href="skylos.html"> Σκύλος </a> </li>
-<li> <a href="gata.html"> Γάτα </a> </li>
-<li> <a href="alles_ypiresies.html"> Άλλες Υπηρεσίες </a> </li>
-<li> <a href="arthra.html"> Άρθρα </a></li>
-<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
-</ul>
-</nav></header>
-<h1> Κατηγορίες </h1>
-<ul>
-<li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
-<li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
-</ul>
-<h2> Γνωρίζετε τα πάντα για τις γάτες; Ας το δούμε!</h2>
-<button onclick="StartQuiz3 ()"> Ξεκινήστε το Quiz </button>
-<script src="quiz3.js"></script>
-<hr>
-<p> Εδώ θα βρείτε ό,τι ακριβώς αναζητάτε για την 
-αγαπημένη σας γάτα! </p>
+<div class="translate-box">
+  <select id="langSelect" onchange="switchLanguage(this.value)">
+    <option value="el">Ελληνικά</option>
+    <option value="en">English</option>
+  </select>
 </div>
+<nav>
+  <div class="logo"> Paw Corner </div>
+  <div class="owner">
+    <a href="../index.html" id="nav-owner">Μαίρη Κάντα</a>
+  </div>   
+  <ul>
+    <li> <a href="index.html" id="nav-home"> Αρχική </a> </li>
+    <li> <a href="skylos.html" id="nav-dog"> Σκύλος </a> </li>
+    <li> <a href="gata.html" id="nav-cat"> Γάτα </a> </li>
+    <li> <a href="alles_ypiresies.html" id="nav-services"> Άλλες Υπηρεσίες </a> </li>
+    <li> <a href="arthra.html" id="nav-articles"> Άρθρα </a></li>
+    <li> <a href="epikinonia.html" id="nav-contact"> Επικοινωνία </a></li>
+  </ul>
+</nav>
+<img src="pawcorner.jpg" width="200" height="200" alt="Paw Corner">
+</header>
+
+<div class="cat-main-container">
+<h1 id="main-heading"> Κατηγορίες </h1>
+<ul id="cat-categories">
+  <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+  <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
+</ul>
+
+<h2 id="quiz-heading"> Γνωρίζετε τα πάντα για τις γάτες; Ας το δούμε!</h2>
+<button id="quiz-btn" onclick="StartQuiz3()"> Ξεκινήστε το Quiz </button>
+
+<hr>
+<p id="intro-desc"> Εδώ θα βρείτε ό,τι ακριβώς αναζητάτε για την αγαπημένη σας γάτα! </p>
+</div>
+
 <footer>
 <p> ©2026 Paw Corner </p>
-<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>    
+<p id="footer-creator"> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>     
 </footer>
+
+<script>
+    let quizLanguage = "el";
+  function switchLanguage(lang) {
+      quizLanguage = lang;
+    if (lang === 'en') {document.title = "Cat";
+      document.getElementById('nav-owner').innerText = "Mary Kanta";
+      document.getElementById('nav-home').innerText = "Home";
+      document.getElementById('nav-dog').innerText = "Dog";
+      document.getElementById('nav-cat').innerText = "Cat";
+      document.getElementById('nav-services').innerText = "Other Services";
+      document.getElementById('nav-articles').innerText = "Articles";
+      document.getElementById('nav-contact').innerText = "Contact";
+
+      document.getElementById('main-heading').innerText = "Categories";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html"> Nutrition </a> </li>
+        <li> <a href="ygieini_metafora.html"> Hygiene & Transport </a> </li>
+      `;
+
+      document.getElementById('quiz-heading').innerText = "Do you know everything about cats? Let's see!";
+      document.getElementById('quiz-btn').innerText = "Start the Quiz";
+      document.getElementById('intro-desc').innerText = "Here you will find exactly what you are looking for for your beloved cat!";
+
+      document.getElementById('footer-creator').innerHTML = "Created by: <a href='../index.html'>Mary Kanta</a>";
+    } else {
+      document.getElementById('page-title').innerText = "Γάτα";
+      document.getElementById('nav-owner').innerText = "Μαίρη Κάντα";
+      document.getElementById('nav-home').innerText = "Αρχική";
+      document.getElementById('nav-dog').innerText = "Σκύλος";
+      document.getElementById('nav-cat').innerText = "Γάτα";
+      document.getElementById('nav-services').innerText = "Άλλες Υπηρεσίες";
+      document.getElementById('nav-articles').innerText = "Άρθρα";
+      document.getElementById('nav-contact').innerText = "Επικοινωνία";
+
+      document.getElementById('main-heading').innerText = "Κατηγορίες";
+      document.getElementById('cat-categories').innerHTML = `
+        <li> <a href="diatrofi_gata.html"> Διατροφή </a> </li>
+        <li> <a href="ygieini_metafora.html"> Υγιεινή & Μεταφορά </a> </li>
+      `;
+
+      document.getElementById('quiz-heading').innerText = "Γνωρίζετε τα πάντα για τις γάτες; Ας το δούμε!";
+      document.getElementById('quiz-btn').innerText = "Ξεκινήστε το Quiz";
+      document.getElementById('intro-desc').innerText = "Εδώ θα βρείτε ό,τι ακριβώς αναζητάτε για την αγαπημένη σας γάτα!";
+
+      document.getElementById('footer-creator').innerHTML = "Δημιουργία: <a href='../index.html'>Μαίρη Κάντα</a>";
+    }
+  }
+</script>
+    <script src="quiz3.js"></script>
 </body>
 </html>
-
-
